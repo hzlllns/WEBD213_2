@@ -1,0 +1,154 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,700,600,500,800);
+
+body {
+    background: #fff url("img/background.png");
+    font-family: 'Raleway', Helvetica, Arial, sans-serif;
+}
+
+#appFrame {
+    margin: 0 auto;
+    width: 450px;
+    overflow: auto;
+    margin-top: 50px;
+    background-color: #f4dabf;
+    padding: 40px;
+}
+
+.header {
+    text-align:center;
+    margin-bottom:10px;
+}
+
+    h1 { 
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin: 0 0 5px 0;
+    }
+
+.gameGrid {
+    background-color: #fff; 
+    padding-top: 45px;
+    height: 480px;
+}
+
+.matchesFound {
+    font-weight: 700;
+    font-size:17px;   
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+
+}
+
+.results {
+    clear:left;
+    font-size:28px; 
+    text-align:center;
+    margin:10px 0;
+    transition: margin 300ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
+}
+
+span.gameOver {
+    font-size: 20px;
+    font-weight: 500;
+    display:block;
+    margin: 20px 0 10px 0;
+}
+
+a.newgame {
+    display: block;
+    width: 150px;
+    margin: 0 auto;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 20px;
+    color: #48bfbc;
+    background-color: #fff;
+    padding: 14px;
+    letter-spacing: 1px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+}
+
+a.newgame:hover {
+    background-color: #48bfbc;
+    color: #fff;
+}
+
+.tileRow {
+    clear:left;
+    margin: 0 0 0 45px;
+}
+
+/* The tile */
+.tile {
+    /* Keep touchable element above */
+    z-index: 1;
+
+    width:68px;
+    height:68px;
+    
+    float:left;
+    margin:2px;
+
+    cursor: pointer;
+
+    background-repeat: no-repeat;
+    background-size:100% 100%;
+
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+}
+
+.tile:hover {
+    opacity: 0.6;
+}
+
+
+/* Define the look of each of the object types */
+
+.objType1 { background-image:url("img/apple.png"); background-color: #a9c962; }
+.objType2 { background-image:url("img/coffee.png"); background-color: #7de5e3; }
+.objType3 { background-image:url("img/chicken.png"); background-color: #ece17b; }
+.objType4 { background-image:url("img/milk.png"); background-color: #b689dd; }
+.objType5 { background-image:url("img/hotdog.png"); background-color: #e193b7; }
+
+.matched {
+    opacity: 0.5;
+    background-color: #d2d2d2;
+    transition: transform 0.8s linear;
+    transform: rotate(180deg);
+    transform: scale(0.1,0.1);
+}
+
+.selected {
+    background-color:#ff0;
+    border: 1px solid green;
+}
+
+.gameWon {
+    transition-property: background;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+    transition-delay: 0.5s;
+    background-color: #2db34a;
+}
+
+
+.bounce {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+    40% {
+    transform: translateY(-30px);
+  }
+    60% {
+    transform: translateY(-15px);
+  }
+}
